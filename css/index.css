@@ -90,7 +90,7 @@
 
 .header .search input {
     width: 508px;
-    height: 34px;
+    height: 32px;
     border: 1px solid #dd302d;
 }
 
@@ -99,7 +99,7 @@
     height: 34px;
     background-color: #dd302d;
     /* align with textbox baseline */
-    vertical-align: top;
+    /* vertical-align: baseline; */
     /* bg image center */
     background-image: url('../images/search_icon.png');
     background-repeat: no-repeat;
@@ -129,6 +129,7 @@
     /* text center */
     height: 48px;
     line-height: 48px;
+    /* text-align: center; */
 }
 .main-nav-list li {
     float: left;
@@ -145,11 +146,12 @@
     width: 190px;
     height: 458px;
     background-color: #f4f4f4;
+    /* for the second menu */
     position: relative;
 }
 .main-content .slide-nav li {
     font-size: 14px;
-    /* no paading or margin, adjust line height directly */
+    /* no pading or margin, adjust line height directly */
     height: 28px;
     line-height: 28px;
     /* margin won't be filled in bg color */
@@ -177,6 +179,7 @@
     display: none;
 }
 
+/* display second menu when mouse over */
 .main-content .slide-nav li:hover .second-menu{
     display: block;
 }
@@ -208,8 +211,6 @@
 }
 
 /* #endregion slide-nav*/
-
-/* #region side-other*/
 .main-content .banner {
     width: 690px;
     height: 458px;
@@ -218,6 +219,8 @@
     line-height: 458px;
     text-align: center;
 }
+/* #region side-other*/
+
 .main-content .slide-other {
     width: 290px;
     height: 458px;
@@ -252,7 +255,7 @@
 
 /* #endregion side-other*/
 
-/* #region picture nav*/
+/* #region other-nav*/
 
 .slide-other .other-nav {
     margin-top: 10px;
@@ -261,15 +264,16 @@
     /* background-color: rosybrown; */
     overflow: hidden;
 }
-
+/* the first row gaps*/
 .slide-other .other-nav .other-nav-list:first-child {
     margin-top: 16px;
 }
-
+/* the second row gaps*/
 .slide-other .other-nav .other-nav-list:nth-child(2) {
     margin: 16px 0;
 }
 
+/* each item column gaps */
 .slide-other .other-nav .other-nav-list li{
     width: 48px;
     height: 70px;
@@ -280,7 +284,7 @@
     font-size: 12px;
     cursor: pointer;
 }
-
+/* the first column */
 .slide-other .other-nav .other-nav-list li:first-child {
     margin-left: 16px;
 }
@@ -288,7 +292,7 @@
 .slide-other .other-nav .other-nav-list .picture {
     width: 48px;
     height: 48px;
-    background-image: url('../images/精灵图.png');
+    background-image: url('../images/sprites.png');
 }
 
 .other-nav-list:nth-child(1) li:nth-child(1) .picture {
@@ -337,7 +341,7 @@
 .seckill {
     margin-top: 10px;
 }
-
+/* for each div under .container */
 .seckill .container div {
     background-color: pink;
     float: left;
@@ -368,10 +372,6 @@
     margin-top: 48px;
 }
 
-.floor .title {
-    font-size: 20px;
-}
-
 .floor .nav-bar {
     height: 30px;
     line-height: 30px;
@@ -379,11 +379,16 @@
     border-bottom: 2px solid #dd302d;
 }
 
+.floor .title {
+    font-size: 20px;
+}
+
 .floor .nav-bar .nav-list li {
     float: left;
     font-size: 14px;
 }
 
+/* add padding and border on a tag not li tag */
 .floor .nav-bar .nav-list li a {
     padding: 0 10px;
     border-right: 1px solid #666;
@@ -482,7 +487,7 @@
 .floor .floor-info .item1 .item1-list li:nth-child(2n) {
     float: right;
 }
-
+/* the second row gaps */
 .floor .floor-info .item1 .item1-list li:nth-child(3),
 .floor .floor-info .item1 .item1-list li:nth-child(4) {
     margin: 14.4px 0;
@@ -525,11 +530,12 @@
 .footer .top-links .links-list:last-child {
     margin-right: 0;
 }
-
+/* change the color and size inside a tag not li tag */
 .footer .top-links .links-list a {
     color: white;
     font-size: 14px;
 }
+/* create a line using div */
 .footer .line {
     height: 1px;
     background-color: #584d4d;
